@@ -172,6 +172,22 @@ export default class Home extends Component {
                                     <span className="w-100">{file.name}</span>
                                 </a>
 
+                                <a href="/profile" className="li">
+                           <img
+                            width="27"
+                            height="27"
+                            src="https://img.icons8.com/ios-filled/50/gender-neutral-user.png"
+                            style={{ borderRadius: '50%' }}
+                            alt="gender-neutral-user"
+                                 onClick={() => {
+                                // Bu erda usernameni olish va uni chiqarish logikasini qo'shing
+                                const username = prompt('Please enter your gmail');
+                                console.log(username); // Ilova konsolida usernameni chiqaradi
+                                }}
+                               />
+                               </a>
+
+
                                 <div className="d-flex" style={{ gap: 16, minWidth: 'fit-content' }}>
 
                                     <button className="btn btn-warning" style={{ 'maxWidth': 'fit-content' }} onClick={() => { copyToClipboard(file.isDirectory ? window.location.origin + '?path=' + this.getPath() + '/' + file.name + '/' : file.downloadURL) }}>Copy link</button>
